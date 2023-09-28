@@ -1,6 +1,28 @@
+
 def full_prima(N):
     # your code here
-    return ''
+    str_N = str(N)
+    
+    if N >= 1 :
+        length = str_N[0]
+        length_int = int(length)
+        prima = True
+        if length_int == 1  :
+            prima = False
+    
+        for i in range (2, length_int) :
+            if length_int % i == 0:
+                prima = False
+
+        Hasil = N % 10
+        for x in range (2, Hasil) :
+            if Hasil % x == 0 :
+                prima = False
+    else :
+        prima = False
+
+    return(prima)
+
 
 if __name__ == '__main__':
     print(full_prima(2)) # True

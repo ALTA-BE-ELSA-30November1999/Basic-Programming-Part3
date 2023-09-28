@@ -1,5 +1,10 @@
 def palindrome(input_string):
-    return 'error response'
+    Polidrome_is = False
+    reverseKata = "".join(reversed(input_string)) #membalikkan string, join = menggabungkan
+    if input_string == reverseKata :
+        Polidrome_is = True
+    return Polidrome_is
+    # return 'error response'
 
 
 if __name__ == '__main__':
